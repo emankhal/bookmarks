@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book marks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="bookmark-solid.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body >
+
+    <main>
+        <section class="header overflow-auto">
+            <h1 class="text-center my-5">Bookmarker</h1>
+        </section>
+        <!-- ------------------------------------------------ -->
+        <section class="marks-form">
+            <div class="container py-5">
+                <div class="mb-4">
+                    <label for="exampleFormControlInput1" class="form-label">
+                        <i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                    <input type="text" class="form-control" id="bookName" placeholder="bookmark name" >
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">
+                        <i class="fa-solid fa-link"></i>
+                        Site URL</label>
+                    <input type="email" class="form-control op" id="siteName" placeholder="website URL">
+                </div>
+                <div class="btn m-auto w-100 border-0">
+                    <button type="button" class="btn btn-danger px-5 " id="submit"
+                        onclick="submitForm()">submit</button>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================================================ -->
+        <section class="table-mark">
+            <div class="container  pt-5">
+                <table class=" w-100 text-center fs-5 bg-white">
+                    <thead class="bg-white">
+                        <tr>
+                            <td>index</td>
+                            <td>Website Name</td>
+                            <td>Visit</td>
+                            <td>Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+
+<!-- Modal -->
+<div class="overlay d-none" id="overlay">
+    <div class="model  p-3" id="model">
+
+    </div>
+</div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
